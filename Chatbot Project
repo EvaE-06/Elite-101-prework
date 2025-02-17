@@ -4,9 +4,9 @@ age = input('How old are you ' + name +'? ' )
 print("Nice to meet you " + name + "!!" )
 
 print("\n HOW MAY I HELP YOU ?**")  
-print("1. Option 1 ") 
-print("2. Option 2 ") 
-print("3. Option 3 ") 
+print("1. Cancel Order ") 
+print("2. Get a Refund ") 
+print("3. File a Complaint ") 
 print("4. Leave Conversation ")  
 
 while True:
@@ -14,13 +14,13 @@ while True:
         choice = input("Please type the number of the option you'd like to choose: ")
         
         if choice == "1":
-            print("Option 1 was selected.")
+            print("Cancel Order was selected.")
         elif choice == "2":
-            print("Option 2 was selected.")
+            print("Get a Refund was selected.")
         elif choice == "3":
-            print("Option 3 was selected")
+            print("File a Complaint was selected")
         elif choice == "4":
-            print(f"Goodbye, {name}!I hope Helped you!!! ")
+            print(f"Goodbye, {name}!I Hope Helped you!!! ")
             break
         else:
             print("Invalid choice. Please choose a valid option.")
