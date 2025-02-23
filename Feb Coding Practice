@@ -1,0 +1,20 @@
+
+def generate_acronym(phrase):
+    # Step 1: Handle empty string case
+    if not phrase:
+        return ""  
+# Return empty string if input is empty
+    
+    # Step 2: Split the phrase into words
+    words = phrase.split()  
+    
+    # Step 3: Take the first letter of each word, convert it to uppercase
+    acronym = ''.join([word[0].upper() for word in words])  
+    
+    # Step 4: Return the generated acronym
+
+    return acronym
+
+# Example Test Cases:
+print(generate_acronym("Random access memory"))  # Output: "RAM"
+print(generate_acronym("Federal Bureau of Investigation"))  # Output: "FBI"
