@@ -1,30 +1,41 @@
 print('WELCOME USER')
-name = input('what is your name? ')
-age = input('How old are you ' + name +'? ' ) 
-print("Nice to meet you " + name + "!!" )
+name = input('What is your name? ')
+age = input('How old are you, ' + name + '? ')
+print("Nice to meet you, " + name + "!!")
 
-print("\n HOW MAY I HELP YOU ?**")  
-print("1. Cancel Order ") 
-print("2. Get a Refund ") 
-print("3. File a Complaint ") 
-print("4. Leave Conversation ")  
+print("\nHOW MAY I HELP YOU?**")  
+print("1. Cancel Order") 
+print("2. Get a Refund") 
+print("3. File a Complaint") 
+print("4. Leave Conversation")  
 
 while True:
-        # User chooses an option
-        choice = input("Please type the number of the option you'd like to choose: ")
+    # User chooses an option
+    choice = input("Please type the number of the option you'd like to choose: ")
         
-        if choice == "1":
-            print("Cancel Order was selected.")
-        elif choice == "2":
-            print("Get a Refund was selected.")
-        elif choice == "3":
-            print("File a Complaint was selected")
-        elif choice == "4":
-            print(f"Goodbye, {name}!I Hope Helped you!!! ")
+    if choice == "1":
+        print("Cancel Order was selected.")
+        order_number = input("Please provide your order number to proceed: ")
+        print(f"Your order {order_number} will be canceled shortly.")
+        another_action = input("Would you like to do something else? (yes/no): ")
+        if another_action.lower() != "yes":
             break
-        else:
-            print("Invalid choice. Please choose a valid option.")
-            
-            
-            
-            
+    elif choice == "2":
+        print("Get a Refund was selected.")
+        refund_reason = input("Please provide the reason for your refund request: ")
+        print(f"Your refund request for reason '{refund_reason}' is being processed.")
+        another_action = input("Would you like to do something else? (yes/no): ")
+        if another_action.lower() != "yes":
+            break
+    elif choice == "3":
+        print("File a Complaint was selected.")
+        complaint_details = input("Please describe your complaint in detail: ")
+        print(f"Your complaint '{complaint_details}' has been received and will be reviewed.")
+        another_action = input("Would you like to do something else? (yes/no): ")
+        if another_action.lower() != "yes":
+            break
+    elif choice == "4":
+        print(f"Goodbye, {name}! I hope I was able to assist you!")
+        break
+    else:
+        print("Invalid option, please try again.")
