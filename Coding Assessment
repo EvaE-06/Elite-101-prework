@@ -1,4 +1,5 @@
 
+
 # ------------------------------------------------------------------------------------
 # The following 2D lists mimic a restaurant seating layout, similar to a grid.
 # 
@@ -16,17 +17,6 @@
 # particular table (column) at a particular timeslot (row).
 # ------------------------------------------------------------------------------------
 
-# Shows the structure of the restaurant layout with all tables free ("o" = open).
-restaurant_tables = [
-    [0,        'T1(2)',  'T2(4)',  'T3(2)',  'T4(6)',  'T5(4)',  'T6(2)'],
-    [1,        'o',      'o',      'o',      'o',      'o',      'o'],
-    [2,        'o',      'o',      'o',      'o',      'o',      'o'],
-    [3,        'o',      'o',      'o',      'o',      'o',      'o'],
-    [4,        'o',      'o',      'o',      'o',      'o',      'o'],
-    [5,        'o',      'o',      'o',      'o',      'o',      'o'],
-    [6,        'o',      'o',      'o',      'o',      'o',      'o']
-]
-
 def find_free_tables(restaurant_tables, timeslot):
     # Get the table labels from the first row
     table_labels = restaurant_tables[0][1:]
@@ -35,8 +25,9 @@ def find_free_tables(restaurant_tables, timeslot):
     timeslot_row = restaurant_tables[timeslot]
     
     # List of tables that are free (status 'o')
-    free_tables = [table_labels[i] for i in range(len(timeslot_row) - 1) if timeslot_row[i + 1] == 'o']
-    
+    free_tables = [table_labels[i] for i in range((timeslot_row)) if timeslot_row[i + 1] == 'o']
+
+    print("Free tables at timeslot", timeslot, ":", free_tables)
     return free_tables
 
 restaurant_tables2 = [
